@@ -14,22 +14,25 @@ function calculateAll() {
   // code in the following two lines is added just for testing purposes.
   // it runs when only iteration 1 is completed. at later point, it can be removed.
   // const singleProduct = document.querySelector('.product');
-  // console.log(singleProduct);
   // updateSubtotal(singleProduct);
   // end of test
 
   // ITERATION 2
-  const allProducts = document.getElementsByClassName('product');
-  console.log(allProducts[1]);
-  const forAll = 0;
+  const allProducts = document.querySelectorAll('.product');
+  console.log(allProducts);
 
-  for (i = 0; i <= allProducts.length; i++) {
-    forAll += allProducts[i];
+  for (i = 0; i < allProducts.length; i++) {
+    updateSubtotal(allProducts[i]);
   }
-  updateSubtotal(allProducts[0]);
 
-  // ITERATION 3
-  // ... your code goes here
+  // // ITERATION 3
+  const superTotal = document.getElementById('total-value').innerText;
+  console.log(superTotal);
+
+  for (i = 0; i < allProducts.length; i++) {
+    superTotal.innerHTML += superResult;
+  }
+  return superTotal.innerHTML;
 }
 
 // ITERATION 4
